@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>
+VC Counter App by Parth
+</title>
+<style>
+	* {font-size:3vw;font-family:Times New Roman;}
+	body {background-color:orange;}
+	h1 {background-color:black;color:orange;width:50%;border-radius:3vw;}
+	textarea {resize:none;}
+</style>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script>
+function check()
+{
+let txt=document.getElementById("id_txt");
+let msg=document.getElementById("id_msg");
+
+if(txt.value == "")
+{
+	alert("U did not enter text");
+	msg.innerHTML = "";
+	txt.focus();
+	return false;
+}
+else
+{
+	return true;
+}
+
+</script>
+</head>
+
+<body>
+<center>
+<h1>VC Counter App</h1>
+<form onsubmit="return check()">
+<textarea name="txt" placeholder="Enter text" id="id_txt" rows=5 cols=30></textarea>
+<br/><br/>
+<input type="submit" value="Count" />
+</form>
+<h2 id="id_msg">{{ msg }}</h2>
+</center>
+</body>
+
+</html>
